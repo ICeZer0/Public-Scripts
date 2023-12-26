@@ -65,7 +65,7 @@ echo " "
 echo "----------------------------------------------------------------"
 echo "Commence Scypted Docker Setup"
 echo "----------------------------------------------------------------"
-sudo docker run --name="scrypted" --network host -d --restart unless-stopped -v ~/.scrypted/volume:/server/volume koush/scrypted
+sudo docker run --name="scrypted" --network host -d --restart unless-stopped -v ~/.scrypted/volume:/server/volume --platform linux/arm64 koush/scrypted:latest
 echo "----------------------------------------------------------------"
 echo "Scrypted Interface is reachable at https://localhost:10443/ or homebridge.local:10443 or port 11080"
 echo "----------------------------------------------------------------"
